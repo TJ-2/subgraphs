@@ -1,0 +1,1 @@
+# Removed GLPManager occurences since it was not included in original subgraph.yaml file
