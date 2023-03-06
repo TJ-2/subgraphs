@@ -1,7 +1,7 @@
 import { BigInt, ethereum } from "@graphprotocol/graph-ts"
 import * as vault from "../generated/Vault/Vault"
 import * as positionRouter from "../generated/PositionRouter/PositionRouter"
-// import * as glpManager from "../generated/GlpManager/GlpManager"
+// import * as glpManager from "../generated/GlpManager/OlpManager"
 import * as rewardRouter from "../generated/RewardRouterV2/RewardRouterV2"
 import {
   CollectMarginFee,

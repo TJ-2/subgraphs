@@ -4,11 +4,11 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: FastPriceEvents
-    network: arbitrum-one
+    network: telos_testnet
     source:
-      address: "0x4530b7de1958270a2376be192a24175d795e1b07"
+      address: "0x1f506654b3c885092Bf7e92E2EE2E5dE3D569992"
       abi: FastPriceEvents
-      startBlock: 3716732  # FastPriceEvents was deployed
+      startBlock: 217832785  # FastPriceEvents was deployed
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4

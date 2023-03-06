@@ -1,5 +1,5 @@
 import { BigInt, Address, Bytes, TypedMap, ethereum, store, log } from "@graphprotocol/graph-ts"
-import { GlpManager, AddLiquidity, RemoveLiquidity } from "../generated/GlpManager/GlpManager"
+import { OlpManager, AddLiquidity, RemoveLiquidity } from "../generated/GlpManager/OlpManager"
 
 import {
   Distribute

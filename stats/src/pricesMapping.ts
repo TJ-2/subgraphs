@@ -12,7 +12,7 @@ import {
   WETH,
   BTC,
   LINK,
-  UNI,
+  TLOS,
   USDT,
   USDC,
   MIM,
@@ -69,7 +69,7 @@ export function handleAnswerUpdatedETH(event: AnswerUpdatedEvent): void {
 }
 
 export function handleAnswerUpdatedUNI(event: AnswerUpdatedEvent): void {
-  _storeChainlinkPrice(UNI, event.params.current, event.block.timestamp, event.block.number)
+  _storeChainlinkPrice(TLOS, event.params.current, event.block.timestamp, event.block.number)
 }
 
 export function handleAnswerUpdatedLINK(event: AnswerUpdatedEvent): void {

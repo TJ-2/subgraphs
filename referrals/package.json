@@ -4,8 +4,8 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy-test": "graph codegen && graph deploy --product hosted-service gdev8317/gmx-arbitrum-referrals-staging --deploy-key $(cat .access_token)",
-    "deploy-prod": "graph codegen && graph deploy --product hosted-service gmx-io/gmx-arbitrum-referrals"
+    "create-local": "graph create gmxreferralstest --node http://127.0.0.1:8020",
+    "deploy-local": "graph deploy gmxreferralstest --ipfs http://127.0.0.1:5001 --node http://127.0.0.1:8020"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.21.1",

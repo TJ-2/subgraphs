@@ -4,7 +4,8 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy-test": "graph deploy --product hosted-service gdev8317/gmx-raw --deploy-key $(cat .access_token)"
+    "create-local": "graph create gmxrawstest2 --node http://127.0.0.1:8020",
+    "deploy-local": "graph deploy gmxrawstest2 --ipfs http://127.0.0.1:5001 --node http://127.0.0.1:8020"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.21.1",
