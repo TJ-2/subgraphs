@@ -4,8 +4,8 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "create-local": "graph create gmxrawstest2 --node http://127.0.0.1:8020",
-    "deploy-local": "graph deploy gmxrawstest2 --ipfs http://127.0.0.1:5001 --node http://127.0.0.1:8020"
+    "create-local": "graph create perpetuals-raw --node http://localhost:8020",
+    "deploy-local": "graph deploy perpetuals-raw --ipfs http://localhost:5001 --node http://localhost:8020"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.21.1",

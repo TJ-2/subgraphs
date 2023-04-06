@@ -1,5 +1,5 @@
 specVersion: 0.0.2
-description: GMX
+description: OmniDex
 repository: https://github.com/gmx-io/gmx-subgraph
 schema:
   file: ./schema.graphql
@@ -9,9 +9,9 @@ dataSources:
     name: ChainlinkAggregatorBTC
     network: telos
     source:
-      address: "0x2f7361b47CFEeB420414ee4EE240e1C357879Aa3"
+      address: "0x21FEc4DB348625c83Abf71F0CbB0dBEA18EDc212"
       abi: ChainlinkAggregator
-      startBlock: 228052547
+      startBlock: 220302996
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -29,9 +29,9 @@ dataSources:
     name: ChainlinkAggregatorETH
     network: telos
     source:
-      address: "0x1Dc33cAa6b983Ce527124C199C8caaD78E4adB59"
+      address: "0x21FEc4DB348625c83Abf71F0CbB0dBEA18EDc212"
       abi: ChainlinkAggregator
-      startBlock: 228052494
+      startBlock: 220302996
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -49,9 +49,9 @@ dataSources:
     name: ChainlinkAggregatorUNI
     network: telos
     source:
-      address: "0x2D3F58FB20CA9128c9bC1998bb961a665a2Fdf19"
+      address: "0x21FEc4DB348625c83Abf71F0CbB0dBEA18EDc212"
       abi: ChainlinkAggregator
-      startBlock: 228052615
+      startBlock: 220302996
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -69,9 +69,9 @@ dataSources:
     name: ChainlinkAggregatorLINK
     network: telos
     source:
-      address: "0x2D3F58FB20CA9128c9bC1998bb961a665a2Fdf19"
+      address: "0x21FEc4DB348625c83Abf71F0CbB0dBEA18EDc212"
       abi: ChainlinkAggregator
-      startBlock: 228052615
+      startBlock: 220302996
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -89,9 +89,9 @@ dataSources:
     name: ChainlinkAggregatorSPELL
     network: telos
     source:
-      address: "0x2D3F58FB20CA9128c9bC1998bb961a665a2Fdf19"
+      address: "0x21FEc4DB348625c83Abf71F0CbB0dBEA18EDc212"
       abi: ChainlinkAggregator
-      startBlock: 228052615
+      startBlock: 220302996
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -109,9 +109,9 @@ dataSources:
     name: ChainlinkAggregatorSUSHI
     network: telos
     source:
-      address: "0x2D3F58FB20CA9128c9bC1998bb961a665a2Fdf19"
+      address: "0x21FEc4DB348625c83Abf71F0CbB0dBEA18EDc212"
       abi: ChainlinkAggregator
-      startBlock: 228052615
+      startBlock: 220302996
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -129,9 +129,9 @@ dataSources:
     name: ChainlinkAggregatorDAI
     network: telos
     source:
-      address: "0x2D3F58FB20CA9128c9bC1998bb961a665a2Fdf19"
+      address: "0x21FEc4DB348625c83Abf71F0CbB0dBEA18EDc212"
       abi: ChainlinkAggregator
-      startBlock: 228052615
+      startBlock: 220302996
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -149,9 +149,9 @@ dataSources:
     name: ChainlinkAggregatorMIM
     network: telos
     source:
-      address: "0x2D3F58FB20CA9128c9bC1998bb961a665a2Fdf19"
+      address: "0x21FEc4DB348625c83Abf71F0CbB0dBEA18EDc212"
       abi: ChainlinkAggregator
-      startBlock: 228052615
+      startBlock: 220302996
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -167,12 +167,12 @@ dataSources:
       file: ./src/pricesMapping.ts
 
   - kind: ethereum/contract
-    name: GlpManager
+    name: OlpManager
     network: telos
     source:
-      address: "0x00CD1C6a053cd8EE9377159EB6F8083B3e5fef3A"
-      abi: GlpManager
-      startBlock: 228030668
+      address: "0x65C0452d27E80700Ba1dB48f8b10ae0c915F97Ea"
+      abi: OlpManager
+      startBlock: 217830054
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -180,31 +180,8 @@ dataSources:
       entities:
         - HourlyGlpStat
       abis:
-        - name: GlpManager
-          file: ./abis/GlpManager.json
-      eventHandlers:
-        - event: AddLiquidity(address,address,uint256,uint256,uint256,uint256,uint256)
-          handler: handleAddLiquidity
-        - event: RemoveLiquidity(address,address,uint256,uint256,uint256,uint256,uint256)
-          handler: handleRemoveLiquidity
-      file: ./src/mapping.ts
-
-  - kind: ethereum/contract
-    name: GlpManager2
-    network: telos
-    source:
-      address: "0x00CD1C6a053cd8EE9377159EB6F8083B3e5fef3A"
-      abi: GlpManager
-      startBlock: 228030668
-    mapping:
-      kind: ethereum/events
-      apiVersion: 0.0.4
-      language: wasm/assemblyscript
-      entities:
-        - HourlyGlpStat
-      abis:
-        - name: GlpManager
-          file: ./abis/GlpManager.json
+        - name: OlpManager
+          file: ./abis/OlpManager.json
       eventHandlers:
         - event: AddLiquidity(address,address,uint256,uint256,uint256,uint256,uint256)
           handler: handleAddLiquidity
@@ -216,9 +193,9 @@ dataSources:
     name: OrderBook
     network: telos
     source:
-      address: "0x493F478A9c2fCce45CfFfa923ee9399431c95CEA"
+      address: "0x6cd45d4e30d0822B99900150FC0a2456bCf852Cc"
       abi: OrderBook
-      startBlock: 228026361
+      startBlock: 217830337
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -255,9 +232,9 @@ dataSources:
     name: FastPriceFeed
     network: telos
     source:
-      address: "0x0e93B4C4b6B4701d62f83C375a47FE49Eb8296D8"
+      address: "0x3F1F0873Fe3C96A5bAdE2C6C71601323609ec461"
       abi: FastPriceFeed
-      startBlock: 228033768
+      startBlock: 217831382
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -276,9 +253,9 @@ dataSources:
     name: FastPriceEvents
     network: telos
     source:
-      address: "0xE910553396BA7a5a8c77290C2dDF08e360D7fD4D"
+      address: "0x1f506654b3c885092Bf7e92E2EE2E5dE3D569992"
       abi: FastPriceEvents
-      startBlock: 228026431
+      startBlock: 217830404
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -298,9 +275,9 @@ dataSources:
     name: FeeGmxRewardDistributor
     network: telos
     source:
-      address: "0xb5444cDEA58a0e1a8eb7a94EDd67d7538F171B8e"
+      address: "0x5E5127383486Bbc3eA6f3B1130773C65dc773A2E"
       abi: RewardDistributor
-      startBlock: 228029620
+      startBlock: 217830181
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -319,9 +296,9 @@ dataSources:
     name: EsgmxGmxRewardDistributor
     network: telos
     source:
-      address: "0xb5444cDEA58a0e1a8eb7a94EDd67d7538F171B8e"
+      address: "0xCc89E7138eBcD36076D9EC52667f3BEA337fDd55"
       abi: RewardDistributor
-      startBlock: 228029620
+      startBlock: 217830151
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -340,9 +317,9 @@ dataSources:
     name: FeeGlpRewardDistributor
     network: telos
     source:
-      address: "0xb5444cDEA58a0e1a8eb7a94EDd67d7538F171B8e"
+      address: "0x6A08Df97deCc238951E86fF9677866204C59fCEb"
       abi: RewardDistributor
-      startBlock: 228029620
+      startBlock: 217831498
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -361,9 +338,9 @@ dataSources:
     name: EsgmxGlpRewardDistributor
     network: telos
     source:
-      address: "0xb5444cDEA58a0e1a8eb7a94EDd67d7538F171B8e"
+      address: "0xb97a6a68185E4C52ce3926A918f179D20c5CBaB3"
       abi: RewardDistributor
-      startBlock: 228029620
+      startBlock: 217831484
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -382,9 +359,9 @@ dataSources:
     name: Vault2
     network: telos
     source:
-      address: "0x83Eb78Fe3beEBA9783fDa7f030eaC7A1DA0E5Fff"
+      address: "0xcf144262575D16BFa373dDD079c2759234A76931"
       abi: Vault
-      startBlock: 228025887
+      startBlock: 217829463
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -409,9 +386,9 @@ dataSources:
     name: Vault
     network: telos
     source:
-      address: "0x83Eb78Fe3beEBA9783fDa7f030eaC7A1DA0E5Fff"
+      address: "0xcf144262575D16BFa373dDD079c2759234A76931"
       abi: Vault
-      startBlock: 228025887
+      startBlock: 217829463
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4

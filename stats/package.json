@@ -4,8 +4,8 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "create-local": "graph create gmxstatstest6 --node http://127.0.0.1:8020",
-    "deploy-local": "graph deploy gmxstatstest6 --ipfs http://127.0.0.1:5001 --node http://127.0.0.1:8020"
+    "create-local": "graph create perpetuals-stats --node http://localhost:8020",
+    "deploy-local": "graph deploy perpetuals-stats --ipfs http://localhost:5001 --node http://localhost:8020"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.21.1",
